@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'lucidweb';
+    src: url('../webfonts/lucidweb.eot?53042255');
+    src: url('../webfonts/lucidweb.eot?53042255#iefix') format('embedded-opentype'),
+    url('../webfonts/lucidweb.woff2?53042255') format('woff2'),
+    url('../webfonts/lucidweb.woff?53042255') format('woff'),
+    url('../webfonts/lucidweb.ttf?53042255') format('truetype'),
+    url('../webfonts/lucidweb.svg?53042255#lucidweb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'lucidweb';
+    src: url('../webfonts/lucidweb.svg?53042255#lucidweb') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "lucidweb";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1.2em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1.2em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-reload:before { content: '\e800'; } /* '' */
+.icon-arrow_down:before { content: '\e801'; } /* '' */
+.icon-arrow_left:before { content: '\e802'; } /* '' */
+.icon-arrow_up:before { content: '\e803'; } /* '' */
+.icon-cardboard:before { content: '\e804'; } /* '' */
+.icon-code:before { content: '\e805'; } /* '' */
+.icon-facebook:before { content: '\e806'; } /* '' */
+.icon-mute:before { content: '\e807'; } /* '' */
+.icon-pause:before { content: '\e808'; } /* '' */
+.icon-play:before { content: '\e809'; } /* '' */
+.icon-link:before { content: '\e80a'; } /* '' */
+.icon-resize:before { content: '\e80b'; } /* '' */
+.icon-settings:before { content: '\e80c'; } /* '' */
+.icon-share:before { content: '\e80d'; } /* '' */
+.icon-twitter:before { content: '\e80e'; } /* '' */
+.icon-volume:before { content: '\e80f'; } /* '' */
+.icon-menu:before { content: '\e86e'; } /* '' */
+.icon-close:before { content: '\e8010'; } /* '\e8010' */

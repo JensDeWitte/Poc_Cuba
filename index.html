@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360 video player</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- OpenGraph tags for sharing experience (facebook, google, etc) -->
+
+    <meta property="og:site_name" content="Lucidweb" />
+    <meta property="og:url" content="https://lucidweb.io/projects/360-video-player/index.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cuba-Experience" />
+    <meta property="og:description" content="Syria’s Silence is a cooperation between Fisheye VR and VRT journalist Jens Franssen. After a VR bootcamp by Fisheye, Jens travelled to Syria with his team consisting of camera operator Patrick and sound operator Tine. When they came back, Fisheye VR and Jens Franssen edited the story together." />
+    <meta property="og:image" content="https://lucidweb.io/projects/360-video-player/assets/images/syria-silence-preview-fb.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content=630 />
+
+    <!-- twitter sharing metadata -->
+
+    <meta name="twitter:card" content="Join us on a visit to Syria and experience the aftermath of war through the eyes of the victims.  Visit https://lucidweb.io/projects/360-video-player/index.html"></meta>
+
+    <!-- compiled stylesheets -->
+
+    <link rel="stylesheet/less" type="text/css" href="./assets/styles/experience.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+
+    <!-- packed js -->
+
+<script type="text/javascript" src="js/aframe.js?31b3118ff496a41a2e43&31b3118ff496a41a2e43"></script><script type="text/javascript" src="js/dashjs.js?31b3118ff496a41a2e43&31b3118ff496a41a2e43"></script><script type="text/javascript" src="js/experience.js?31b3118ff496a41a2e43&31b3118ff496a41a2e43"></script></head>
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- <video id="1_start_vid" autoplay loop="true" src="./assets/video/1_Start_Strand_gr_1.mp4"> </video>
+      <video id="2_Oldtimer_vid" autoplay loop="true" src="./assets/video/2_Oldtimer_innen_gr_1.mp4"> </video>
+      <video id="3_casa_vid" autoplay loop="true" src="./assets/video/3_casa_cerveza_gr_1.mp4"> </video>
+      <video id="4_Placa_vid" autoplay loop="true" src="./assets/video/4_TR_Placa_Major_gr_1.mp4"> </video>
+      <video id="5_Tanzkurs_vid" autoplay loop="true" src="./assets/video/5_Tanzkurs_Strand_gr_1.mp4"> </video>
+      <video id="6_Peso_vid" autoplay loop="true" src="./assets/video/6_Peso_verkaufen_gr_1.mp4"> </video>
+      <video id="7_Pelikan_vid" autoplay loop="true" src="./assets/video/7_Pelikan_Strand_gr_1.mp4"> </video>
+      <video id="8_Festung_vid" autoplay loop="true" src="./assets/video/8_Festung_Morro_gr_1.mp4"> </video>
+      <video id="9_Angler_vid" autoplay loop="true" src="./assets/video/9_Angler_Carlos_HAV_gr_1.mp4"> </video>
+      <video id="10_Damfzug_vid" autoplay loop="true" src="./assets/video/10_Damfzug_gr_1.mp4"> </video>
+      <video id="11_Embalse_vid" autoplay loop="true" src="./assets/video/11_Embalse_Boot_gr_1.mp4"> </video>
+      <video id="12_Fort_vid" autoplay loop="true" src="./assets/video/12_Fort_Hav_abends_gr_1.mp4"> </video>
+      <video id="13_Hotel_vid" autoplay loop="true" src="./assets/video/13_Hotel_Ens_gr_1.mp4"> </video>
+      <video id="14_Mai_vid" autoplay loop="true" src="./assets/video/14_1_Mai_Hav_gr_1.mp4"> </video>
+      <video id="15_Denkmal_vid" autoplay loop="true" src="./assets/video/15_Denkmal_SClara_Che_nah_gr_1.mp4"> </video>
+      <video id="16_Luxus_vid" autoplay loop="true" src="./assets/video/16_Luxus_Verfall_Hav_gr__1.mp4"> </video>
+      <video id="17_Kapitol_vid" autoplay loop="true" src="./assets/video/17_Kapitol_Hav_gr_1.mp4"> </video> -->
+
+      <!-- images !-->
+      <img id="1_start" src="./assets/images/1_Start_Strand_gr.png">
+      <img id="2_Oldtimer" src="./assets/images/2_Oldtimer_innen_gr.png">
+      <img id="3_casa" src="./assets/images/3_casa_cerveza_gr.png">
+      <img id="4_Placa" src="./assets/images/4_TR_Placa_Major_gr.png">
+      <img id="5_Tanzkurs" src="./assets/images/5_Tanzkurs_Strand_gr.png">
+      <img id="6_Peso" src="./assets/images/6_Peso_verkaufen_gr.png">
+      <img id="7_Pelikan" src="./assets/images/7_Pelikan_Strand_gr.png">
+      <img id="8_Festung" src="./assets/images/8_Festung_Morro_gr.png">
+      <img id="9_Angler" src="./assets/images/9_Angler_Carlos_HAV_gr.png">
+      <img id="10_Damfzug" src="./assets/images/10_Damfzug_gr.png">
+      <img id="11_Embalse" src="./assets/images/11_Embalse_Boot_gr.png">
+      <img id="12_Fort" src="./assets/images/12_Fort_Hav_abends_gr.png">
+      <img id="13_Hotel" src="./assets/images/13_Hotel_Ens_gr.png">
+      <img id="14_Mai" src="./assets/images/14_1_Mai_Hav_gr.png">
+      <img id="15_Denkmal" src="./assets/images/15_Denkmal_SClara_Che_nah_gr.png">
+      <img id="16_Luxus" src="./assets/images/16_Luxus_Verfall_Hav_gr_.png">
+      <img id="17_Kapitol" src="./assets/images/17_Kapitol_Hav_gr.png">
+
+      <!-- scenes !-->
+      <script id="scene1" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene5" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Tanzkurs"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;"  radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#5_Tanzkurs" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene5"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene14"  position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Mai"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#14_Mai" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene14"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene9" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Angler"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#9_Angler" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene9"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene2" position="2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Oldimter"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#2_Oldtimer" position="2 1.8 -2.5"rotation="0 -30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene2"></a-image> -->
+        <a-videosphere id="videosphere" src="#1_start" radius="3000"></a-videosphere>
+      </script>
+      <script id="scene2" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene11" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Embalse"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#11_Embalse" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene11"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene16" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Luxus"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#16_Luxus" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene16"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene17" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Kapitol"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#17_Kapitol" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene17"></a-image> -->
+        <a-videosphere id="videosphere" src="#2_Oldtimer" radius="3000"></a-videosphere>
+      </script>
+      <script id="scene3" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene4" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Placa"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#4_Placa" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene4"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene7" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Pelikan"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#7_Pelikan" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene7"></a-image> -->
+        <a-sky src="#3_casa"></a-sky>
+      </script>
+      <script id="scene4" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene12" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Fort"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#12_Fort" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene12"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene6" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Peso"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#6_Peso" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene6"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene14" position="-2 1.8 -2.5" >
+          <a-entity text="color: white; anchor: center; value: Mai"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#14_Mai" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene14"></a-image> -->
+        <a-sky src="#4_Placa"></a-sky>
+      </script>
+      <script id="scene5" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene3" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Casa"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#3_casa" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene3"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene15" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Denkmal"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#15_Denkmal" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene15"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene11" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Embalse"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#11_Embalse" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene11"></a-image> -->
+        <a-sky src="#5_Tanzkurs"></a-sky>
+      </script>
+      <script id="scene6" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene8" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Festung"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#8_Festung" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene8"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene10" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Damfzug"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#10_Damfzug" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene10"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene13" position="-2 1.8 -2.5" >
+          <a-entity text="color: white; anchor: center; value: Hotel"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#13_Hotel" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene13"></a-image> -->
+        <a-sky src="#6_Peso"></a-sky>
+      </script>
+      <script id="scene7" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene12" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Fort"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;"  radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#12_Fort" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene12"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene9" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Angler"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#9_Angler" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene9"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene15" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Denkmal"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#15_Denkmal" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene15"></a-image> -->
+        <a-sky src="#7_Pelikan"></a-sky>
+      </script>
+      <script id="scene8" type="text/html">
+        <!-- optional path !-->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene5" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Tanzkurs"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#5_Tanzkurs" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene5"></a-image> -->
+        <!-- optional path !-->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene9" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Angler"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#9_Angler" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene9"></a-image> -->
+        <!-- optional path !-->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene2" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Oldtimer"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#2_Oldtimer" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene2"></a-image> -->
+        <a-sky src="#8_Festung"></a-sky>
+      </script>
+      <script id="scene9" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene15" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Denkmal"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#15_Denkmal" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene15"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene11" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Embalse"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;"radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#11_Embalse" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene11"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene16" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Luxus"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#16_Luxus" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene16"></a-image> -->
+        <a-sky src="#9_Angler"></a-sky>
+      </script>
+      <script id="scene10" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene7" position="-2 1.8 -2.5" >
+        <a-entity text="color: white; anchor: center; value: Pelikan"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" position="-2 1.8 -2.5" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#7_Pelikan" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene7"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene8" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Festung"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#8_Festung" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene8"></a-image> -->
+       <a-sky src="#10_Damfzug"></a-sky>
+      </script>
+      <script id="scene11" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene7" position="-.7 1.8 -3" >
+        <a-entity text="color: white; anchor: center; value: Pelikan"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#7_Pelikan" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene7"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene6" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Peso"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#6_Peso" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene6"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene16" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Luxus"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#16_Luxus" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene16"></a-image> -->
+        <a-sky src="#11_Embalse"></a-sky>
+      </script>
+      <script id="scene12" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene17" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Kapitol"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#17_Kapitol" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene17"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene8" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Festung"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#8_Festung" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene8"></a-image> -->
+        <a-sky src="#12_Fort"></a-sky>
+      </script>
+      <script id="scene13" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene5" position="-.7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Tanzkurs"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#5_Tanzkurs" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene5"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene10" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Damfzug"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#10_Damfzug" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene10"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene8" position="-2 1.8 -2.5">
+          <a-entity text="color: white; anchor: center; value: Festung"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#8_Festung" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene8"></a-image> -->
+        <a-sky src="#13_Hotel"></a-sky>
+      </script>
+      <script id="scene14" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene3" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Casa"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;"radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#3_casa" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene3"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene15" position=".7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Denkmal"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#15_Denkmal" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene15"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene11" position="-2 1.8 -2.5" >
+          <a-entity text="color: white; anchor: center; value: Embalse"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#11_Embalse" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene11"></a-image> -->
+        <a-sky src="#14_Mai"></a-sky>
+      </script>
+      <script id="scene15" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene4" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Placa"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#4_Placa" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene4"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene6" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Peso"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#6_Peso" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene6"></a-image> -->
+        <a-sky src="#15_Denkmal"></a-sky>
+      </script>
+      <script id="scene16" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene6" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Peso"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#6_Peso" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene6"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene13" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Hotel"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#13_Hotel" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene13"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene17" position="-2 1.8 -2.5" >
+          <a-entity text="color: white; anchor: center; value: Kapitol"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#17_Kapitol" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene17"></a-image> -->
+        <a-sky src="#16_Luxus"></a-sky>
+      </script>
+      <script id="scene17" type="text/html">
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene6" position="-.7 1.8 -3" >
+          <a-entity text="color: white; anchor: center; value: Peso"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#6_Peso" position="-.7 1.8 -3" rotation="0 10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene6"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene13" position=".7 1.8 -3">
+          <a-entity text="color: white; anchor: center; value: Hotel"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#13_Hotel" position=".7 1.8 -3" rotation="0 -10 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene13"></a-image> -->
+        <a-entity event-set__click="_event: click; _target: #scene-template; template: src: #scene10" position="-2 1.8 -2.5" >
+          <a-entity text="color: white; anchor: center; value: Damfzug"></a-entity>
+          <a-sphere event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7" color="white" material="transparent:true; opacity: 0.6;" radius=".1">
+            <a-animation begin="mouseenter" end="mouseleave" fill="forwards" repeat="0"
+                     direction="normal" attribute="radius" from=".1"
+                     to=".2" dur="500"></a-animation>
+            <a-animation begin="mouseleave" end="mouseenter" repeat="0" fill="forwards"
+                      direction="normal" attribute="radius" from=".2"
+                      to=".1" dur="500"></a-animation>
+          </a-sphere>
+        </a-entity>
+        <!-- <a-image src="#10_Damfzug" position="-2 1.8 -2.5" rotation="0 30 0" material="transparent:true; opacity:0.7" event-set__enter="_event: mouseenter; opacity:1" event-set__leave="_event: mouseleave; opacity:0.7"  event-set__click="_event: click; _target: #scene-template; template: src: #scene10"></a-image> -->
+        <a-sky src="#17_Kapitol"></a-sky>
+      </script>
+    </a-assets>
+    <a-entity id="scene-template" template="src: #scene1">
+    </a-entity>
+    <a-camera>
+      <a-cursor color="white"></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+</html>

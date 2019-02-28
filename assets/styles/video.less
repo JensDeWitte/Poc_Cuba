@@ -1,0 +1,398 @@
+
+body {
+  height: 100%;
+  width: 100%;
+  z-index: 1000000000;
+  display: block;
+  overflow: hidden;
+}
+
+/**
+ * VIDEO START OVERLAY
+ */
+
+#video-start-overlay {
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+
+  .background {
+    background-color: black;
+    opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+  }
+
+  button {
+    z-index: 10002;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    opacity: 0.6;
+    font-size: 6em;
+    width: 14em;
+    height: 14em;
+    margin-left: -7em;
+    margin-top: -7em;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  button:active {
+    color: #fcffcc;
+  }
+}
+
+button.control {
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 100001;
+  font-size: 18px;
+  opacity: 0.75;
+  padding: 0px;
+  width: 40px;
+  height: 50px;
+}
+
+.blue-controls {
+
+  button:hover i.icon,
+  button:hover i.icon:before {
+    color: #00a6ff;
+    background: -webkit-linear-gradient(#00a6ff, #00ffce);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1.0;
+  }
+
+}
+
+button.control.enter-vr {
+  //font-size: 32px;
+}
+
+.left .control {
+  display: block;
+  float: left;
+  height: 50px;
+}
+
+.right .control {
+  display: block;
+  float: right;
+  height: 50px;
+}
+
+button:hover {
+  opacity: 1.0;
+}
+
+
+
+/**
+ * 2D VIDEO CONTROLS
+ */
+
+@videocontrolfontsize: 0.6em;
+@videocontrolfontheight: 2em;
+
+#video-controls-2d {
+  display: block;
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 100000;
+}
+
+#video-controls-2d .progress-bar {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0px;
+  bottom: 50px;
+  z-index: 100001;
+}
+
+#video-controls-2d .progress-bar .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  background-color: #666666;
+  opacity: 0.4;
+  z-index: 100002;
+}
+
+#video-controls-2d .progress-bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  color: #00a6ff;
+  background: -webkit-linear-gradient(#00a6ff, #00ffce);
+  z-index: 100003;
+}
+
+#video-controls-2d .progress-bar #update-video-progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100004;
+}
+
+#video-controls-2d .progress-bar #update-video-progress:hover {
+  cursor: pointer;
+}
+
+#video-controls-2d .background {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 100001;
+}
+
+#video-controls-2d div.controls {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100002;
+  font-size: @videocontrolfontsize;
+}
+
+#video-controls-2d div.controls .left {
+  display: block;
+  float: left;
+  height: 50px;
+  margin-left: 10px;
+}
+
+#video-controls-2d div.controls .right {
+  display: block;
+  float: right;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#video-controls-2d button.icon {
+  width: 40px;
+  height: 1.8em;
+  line-height: 1.8em;
+  font-size: 3.6em;
+}
+
+#video-controls-2d .icon {
+  width: 1.8em;
+}
+
+#video-controls-2d button.wide {
+  width: 60px;
+  height: 50px;
+}
+
+#video-controls-2d .time-display-progress,
+#video-controls-2d .time-display-duration {
+  color: white;
+  font-size: 1.5em;
+  line-height: 4.3em;
+  margin-left: 20px;
+  opacity: 0.75;
+}
+
+#video-controls-2d .time-display-duration {
+  margin-left: 0px;
+}
+
+/** SHARING MODAL **/
+
+@share-icon-dimension: 10vw;
+@share-icon-font-size: 7vw;
+@share-icon-line-height: 10vw;
+
+div.share-video {
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  opacity: 0.8;
+  border: none;
+
+  a.share-video-close {
+    color: white;
+    font-size: 8vw;
+    position: absolute;
+    top: 0vw;
+    right: 0vw;
+    text-decoration: none;
+    opacity: 0.7;
+
+    i.icon {
+      display: block;
+      width: 14vw;
+      height: 14vw;
+    }
+
+    i:before {
+      width: 10vw;
+      height: 10vw;
+      margin: 2vw 2vw;
+    }
+  }
+
+  a.share-video-close:hover {
+    opacity: 1;
+  }
+
+}
+
+div.share-video a.share-link {
+  display: block;
+  float: left;
+  margin: 2vw 2vw;
+  border: none;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  height: @share-icon-dimension;
+  width: @share-icon-dimension;
+}
+
+div.share-video a.share-link:hover {
+  //color: #00a6ff;
+  background: -webkit-linear-gradient(#00a6ff, #00ffce);
+}
+
+div.share-video a.share-link .icon,
+div.share-video a.share-link .icon:before {
+  display: block;
+  border: none;
+  color: #333;
+  font-size: @share-icon-font-size;
+  width: @share-icon-dimension;
+  height: @share-icon-dimension;
+  line-height: @share-icon-dimension;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0px 0px;
+}
+
+div.share-video a.share-link:hover .icon,
+div.share-video a.share-link:hover .icon:before {
+  color: white;
+
+}
+
+div.share-video .icon-group {
+  display: inline-block;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  width: 42vw;
+  height: 14vw;
+  margin: -10vw 0px 0px -21vw;
+
+
+  div {
+    width: 100%;
+    height: 100%;
+  }
+
+  div.reload {
+    position: absolute;
+    left: 14vw;
+    top: -15vw;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  div.share-video {
+
+    a.share-video-close {
+      font-size: 80px;
+
+      i.icon {
+        width: 140px;
+        height: 140px;
+      }
+
+      i:before {
+        width: 100px;
+        height: 100px;
+        margin: 20px 20px;
+      }
+    }
+
+  }
+
+  div.share-video a.share-link {
+    margin: 20px 20px;
+    height: 100px;
+    width: 100px;
+  }
+
+  div.share-video a.share-link .icon,
+  div.share-video a.share-link .icon:before {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  div.share-video .icon-group {
+
+    width: 420px;
+    height: 140px;
+    margin: -100px 0px 0px -210px;
+
+    div.reload {
+      left: 140px;
+      top: -150px;
+    }
+  }
+
+}
+
+.desktop-video-close {
+   z-index: 1000000000;
+   position: absolute;
+   top: 0;
+   right: 0;
+   font-size: 2em;
+   background-color: #333;
+   color: white;
+   padding: 0.2em 0.1em;
+ }
+
+.desktop-video-close:hover {
+  background-color: #fff;
+}
